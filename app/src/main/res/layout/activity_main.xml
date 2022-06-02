@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#111111"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/homeBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="9dp"
+            android:background="@drawable/white"
+            android:backgroundTint="#715dd3" />
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#715dd3"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawablePadding="5dp"
+            android:drawableTint="#715dd3"
+            android:hint="Link"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingBottom="15dp"
+            android:text=""
+            android:textColor="#715dd3"
+            android:textColorHint="#715dd3" />
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/circular"
+            android:backgroundTint="#715dd3"
+            android:paddingTop="1dp"
+            android:text="GO"
+            android:textColor="#715dd3"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnNum"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/circular"
+            android:backgroundTint="#715dd3"
+            android:paddingTop="1dp"
+            android:text="1"
+            android:textColor="#715dd3"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/urlBtn"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/ic_baseline_auto_fix_high_24"
+            android:drawableTint="#715dd3"
+            android:paddingLeft="10dp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="#715dd3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone" />
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webview"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:elevation="10dp"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3647571885997412/8094051167" />
+
+        <!-- ca-app-pub-3940256099942544/6300978111
+         ca-app-pub-3647571885997412/8094051167-->
+    </RelativeLayout>
+</LinearLayout>

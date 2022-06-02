@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".url">
+
+    <TextView
+        android:id="@+id/streamerTv"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:elevation="11dp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="@color/white"
+        android:paddingTop="10dp"
+        android:textAllCaps="true"
+        android:paddingLeft="5dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="340dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/thumb"
+        android:elevation="10dp"
+        android:foreground="@drawable/square"
+        app:layout_constraintBottom_toTopOf="@+id/et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/circular"
+        android:ems="10"
+        android:hint="PASTE LINK | الصق الرابط"
+        android:inputType="none"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textColorHint="#111111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Select a resolution:"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et" />
+
+    <RadioGroup
+        android:id="@+id/rGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView0">
+
+        <RadioButton
+            android:id="@+id/rb1080"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#111111"
+            android:text="1080p"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb720"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:buttonTint="#111111"
+            android:text="720p"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb480"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:buttonTint="#111111"
+            android:text="480p"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb360"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:buttonTint="#111111"
+            android:text="360p"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb160"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:buttonTint="#111111"
+            android:text="160p"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/copyBtn"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/circularbutton"
+        android:drawableLeft="@drawable/ic_baseline_content_copy_24"
+        android:drawableTint="#111111"
+        android:paddingLeft="20dp"
+        android:text="   Copy Link"
+        android:textAlignment="textStart"
+        android:textColor="#111111"
+        android:textSize="18dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rGroup" />
+
+    <Button
+        android:id="@+id/streamBtn"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/circularbutton"
+        android:drawableLeft="@drawable/ic_baseline_ondemand_video_24"
+        android:drawableTint="#111111"
+        android:paddingLeft="20dp"
+        android:text="   Play Stream"
+        android:textAlignment="textStart"
+        android:textColor="#111111"
+        android:textSize="18dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copyBtn" />
+
+    <ImageView
+        android:id="@+id/donateView"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/donate"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4584625439410821/1407992388"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </com.google.android.gms.ads.AdView>
+
+    <Button
+        android:id="@+id/p720"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circularbutton"
+        android:drawableLeft="@drawable/ic_baseline_content_copy_24"
+        android:drawableTint="@color/white"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="720p"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/p480"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srcBtn" />
+
+    <Button
+        android:id="@+id/p480"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circularbutton"
+        android:drawableLeft="@drawable/ic_baseline_content_copy_24"
+        android:drawableTint="@color/white"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="480p"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/p360"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p720" />
+
+    <Button
+        android:id="@+id/p360"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circularbutton"
+        android:drawableLeft="@drawable/ic_baseline_content_copy_24"
+        android:drawableTint="@color/white"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="360p"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/p160"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p480" />
+
+    <Button
+        android:id="@+id/p160"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circularbutton"
+        android:drawableLeft="@drawable/ic_baseline_content_copy_24"
+        android:drawableTint="@color/white"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="160p"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p360" />
+
+    <Button
+        android:id="@+id/audio"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circularbutton"
+        android:drawableLeft="@drawable/ic_baseline_content_copy_24"
+        android:drawableTint="@color/white"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="Audio صوت"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p160" />
+
+     <ImageView
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:layout_marginEnd="10dp"
+        android:alpha="0.1"
+        android:background="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" /> -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developed by @HE96EH"
+        android:textColor="#111111"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/donateView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3647571885997412/8094051167"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
